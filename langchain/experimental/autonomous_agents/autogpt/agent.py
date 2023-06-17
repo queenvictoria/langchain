@@ -80,6 +80,10 @@ class AutoGPT:
             chat_history_memory=chat_history_memory,
         )
 
+    @property
+    def input_keys(self) -> List[str]:
+        return ["objective"]
+
     def run(self, goals: List[str]) -> str:
         user_input = (
             "Determine which next command to use, "

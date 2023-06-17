@@ -10,6 +10,8 @@ class AutoGPTMemory(BaseChatMemory):
     retriever: VectorStoreRetriever = Field(exclude=True)
     """VectorStoreRetriever object to connect to."""
 
+    memory_key: str = "history"  #: :meta private:
+
     @property
     def memory_variables(self) -> List[str]:
         return ["chat_history", "relevant_context"]
