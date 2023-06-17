@@ -84,6 +84,10 @@ class AutoGPT:
     def input_keys(self) -> List[str]:
         return ["objective"]
 
+    @property
+    def output_keys(self) -> List[str]:
+        return []
+
     def run(self, goals: List[str]) -> str:
         user_input = (
             "Determine which next command to use, "
